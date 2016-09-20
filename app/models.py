@@ -1,7 +1,12 @@
-from flask.ext.login import UserMixin
-from werkzeug.security import generate_password_hash
+from flask_login import UserMixin
+from werkzeug.security import generate_password_hash, check_password_hash
 
-from app import db
+from app import db, login_manager
+
+
+@login_manager.user_loader
+def load_user(user_id):
+    return User.query.filter_by(id=user_id).first()
 
 
 class User(UserMixin, db.Model):
@@ -14,6 +19,9 @@ class User(UserMixin, db.Model):
         super(User, self).__init__()
         self.username = username
         self.password = password
+
+    def validate(self, password):
+        return check_password_hash(self.password_hash, password)
 
     @property
     def password(self):
