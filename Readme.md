@@ -1,5 +1,7 @@
 #Fitbit OAuth Flask Template
 
+## To those watching closely... I have not added the fitbit part yet...
+
 This project defines a basic structure to make applications based
 on the Fitbit API.
 
