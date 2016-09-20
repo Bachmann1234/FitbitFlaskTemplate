@@ -6,6 +6,9 @@
     </head>
 
     <body>
+        {% include '_flashes.html' %}
+        {% include 'loginlogout.html' %}
+
         Hi {{ current_user.username }}!
     </body>
 </html>

@@ -12,4 +12,4 @@ class RegistrationForm(Form):
 
 class LoginForm(Form):
     username = StringField('Username', [validators.Length(min=4, max=25)])
-    password = PasswordField('password')
+    password = PasswordField('Password')
