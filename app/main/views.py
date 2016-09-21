@@ -1,4 +1,5 @@
 import flask_login
+import sqlalchemy
 from flask import flash
 from flask import redirect
 from flask import render_template
@@ -49,7 +50,13 @@ def register():
             form.username.data,
             form.password.data
         )
-        db.session.add(user)
-        flash('Thanks for registering')
-        return redirect(url_for('main.login'))
+        try:
+            db.session.add(user)
+            db.session.commit()
+            flash('Thanks for registering')
+            return redirect(url_for('main.login'))
+        except sqlalchemy.exc.IntegrityError:
+            db.session.rollback()
+            flash('Username {} already taken'.format(form.username.data))
+
     return render_template('register.html', form=form)
