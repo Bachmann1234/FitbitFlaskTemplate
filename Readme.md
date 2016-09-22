@@ -54,6 +54,11 @@ scope. Your app will almost certainly need more than that.
 
 [Read more about OAuth Scopes](https://dev.fitbit.com/docs/oauth2/)
 
+Almost there. The first time you run the app you need to create the database. With your virtual environment activated run
+```
+python manage.py createdb
+```
+
 Finally to run the app simply make sure your virtual environment is active and run
 
 ```

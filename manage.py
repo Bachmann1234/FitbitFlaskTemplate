@@ -1,4 +1,6 @@
-from app import create_app
+import sys
+
+from app import create_app, db
 from config import get_current_config
 
 app = create_app(
@@ -6,5 +8,12 @@ app = create_app(
 )
 
 
+def create_db():
+    db.init_app(app)
+
+
 if __name__ == '__main__':
-    app.run()
+    if len(sys.argv) > 1 and sys.argv[1] == 'createdb':
+        create_db()
+    else:
+        app.run()
