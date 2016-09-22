@@ -8,7 +8,9 @@
     <body>
         {% include '_flashes.html' %}
         {% include 'loginlogout.html' %}
-
-        Hi {{ current_user.username }}!
+        <a href="{{ permission_url }}">Authorize Or Re-authorize Fitbit</a>
+        <div>
+            Hi {{ current_user.username }} I tried to access your fitbit user profile: {{ user_profile }}!
+        </div>
     </body>
 </html>

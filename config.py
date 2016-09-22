@@ -25,9 +25,14 @@ class DevelopmentConfig(Config):
 class TestingConfig(Config):
     TESTING = True
     WTF_CSRF_ENABLED = False
+    FITBIT_CLIENT_ID = 'fake_id'
+    FITBIT_CLIENT_SECRET = 'fake_secret'
     SQLALCHEMY_DATABASE_URI = os.environ.get('TEST_DATABASE_URL') or \
         'sqlite:///' + os.path.join(basedir, 'data-test.sqlite')
 
+
+def get_current_config():
+    return config[os.getenv('FLASK_CONFIG') or 'default']
 
 config = {
     'development': DevelopmentConfig,

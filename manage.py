@@ -1,9 +1,8 @@
-import os
-
 from app import create_app
+from config import get_current_config
 
 app = create_app(
-    os.getenv('FLASK_CONFIG') or 'default'
+    get_current_config()
 )
 
 
