@@ -8,6 +8,8 @@ a very basic registration form.
 
 The Flask Structure is from [Miguel Grinberg's Book](http://shop.oreilly.com/product/0636920031116.do) 
 
+[Repo For His Book Here](https://github.com/miguelgrinberg/flasky)
+
 If you wish to learn more about Flask check it out. Or the [Flask Project Page](http://flask.pocoo.org/)
  
 [Read More About the Fitbit API](https://dev.fitbit.com/docs/)
