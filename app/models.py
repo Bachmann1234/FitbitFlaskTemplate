@@ -29,7 +29,7 @@ class User(UserMixin, db.Model):
     __tablename__ = 'users'
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(64), unique=True, index=True)
-    password_hash = db.Column(db.String(128))
+    password_hash = db.Column(db.String(256))
 
     def __init__(self, username, password):
         super(User, self).__init__()
@@ -52,8 +52,8 @@ class FitbitToken(db.Model):
     __tablename__ = 'fitbit_tokens'
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
-    refresh_token = db.Column(db.String(120))
-    access_token = db.Column(db.String(120))
+    refresh_token = db.Column(db.String(500))
+    access_token = db.Column(db.String(500))
 
     def __init__(self, user_id, access_token, refresh_token):
         super(FitbitToken, self).__init__()
