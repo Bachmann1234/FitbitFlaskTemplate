@@ -14,7 +14,7 @@ If you wish to learn more about Flask check it out. Or the [Flask Project Page](
 
 ## Developing Your Own App
 
-First clone this repo
+First fork this repo
 
 Then create a [Fitbit App Config](https://dev.fitbit.com/apps/new). 
 
