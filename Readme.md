@@ -46,7 +46,7 @@ pyvenv venv
 source venv/bin/activate
 pip install -r requirements
 ```
-Finally, you should decide on the oauth scopes for your project. Specifically, define what data your app will 
+Finally, you should decide on the OAuth scopes for your project. Specifically, define what data your app will
 be accessing from people's Fitbit accounts. These are defined in fitbit.py. This example only uses the profile
 scope. Your app will almost certainly need more than that.
 
