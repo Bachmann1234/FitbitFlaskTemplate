@@ -68,3 +68,8 @@ python /Users/bachmann/code/fitbitOauthFlask/manage.py
  * Debugger is active!
  * Debugger pin code: 129-285-482
 ```
+
+This app has been put on heroku so you should be able to get it working there as well.
+
+The app as written will only access your fitbit profile to demonstrate OAuth working.
+[Try It Out](https://fitbitdemo.herokuapp.com/)
