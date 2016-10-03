@@ -62,7 +62,7 @@ python manage.py createdb
 Finally to run the app simply make sure your virtual environment is active and run
 
 ```
-python /Users/bachmann/code/fitbitOauthFlask/manage.py
+python manage.py
  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
  * Restarting with stat
  * Debugger is active!
