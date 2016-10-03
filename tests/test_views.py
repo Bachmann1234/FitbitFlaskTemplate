@@ -1,8 +1,7 @@
-import flask_login
 import responses
 from fitbit.exceptions import BadResponse
 
-from app.fitbit import get_auth_url
+from app.fitbit_client import get_auth_url
 from app.models import save_fitbit_token, User
 
 

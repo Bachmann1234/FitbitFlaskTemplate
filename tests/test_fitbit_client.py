@@ -1,10 +1,10 @@
 import responses
 
-from app.fitbit import get_token, get_auth_url, do_fitbit_auth
+from app.fitbit_client import get_token, get_auth_url, do_fitbit_auth
 from app.models import get_user_fitbit_credentials
 
 
-def test_get_token():
+def test_get_token(test_client):
     assert get_token() == 'ZmFrZV9pZDpmYWtlX3NlY3JldA=='
 
 

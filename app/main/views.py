@@ -9,7 +9,7 @@ from flask import url_for
 from flask_login import logout_user, login_required, login_user
 
 from app import db
-from app.fitbit import fitbit_client, get_permission_screen_url, do_fitbit_auth
+from app.fitbit_client import fitbit_client, get_permission_screen_url, do_fitbit_auth
 from app.main.forms import RegistrationForm, LoginForm
 from app.models import User, get_user_fitbit_credentials
 from . import main

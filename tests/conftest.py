@@ -11,8 +11,10 @@ def test_client(flask_app):
 
 
 @fixture
-def flask_app():
+def flask_app(monkeypatch):
+    monkeypatch.setenv('FLASK_CONFIG', 'testing')
     f_app = create_app(config['testing'])
+    db.create_all()
     yield f_app
     db.session.close()
     db.drop_all()
