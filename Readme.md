@@ -40,7 +40,9 @@ SECRET_KEY=sdasdas
 FLASK_CONFIG=development
 ```
 
-After defining those you are ready to setup development
+After defining those you are ready to setup development.
+
+While the app uses sqlite for development its is designed to eventually be deployed to Heroku and requires Postgres to be installed. You should be able to install this with your package manager of choice. If you don't care about Heroku and dont intend to use Postgres for your production app you can remove the dependency `psycopg2` from `requirements.txt`
 
 ```
 # Create a virtual environment for 
