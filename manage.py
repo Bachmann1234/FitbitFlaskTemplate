@@ -10,6 +10,7 @@ app = create_app(
 
 def create_db():
     db.init_app(app)
+    db.create_all()
 
 
 if __name__ == '__main__':
